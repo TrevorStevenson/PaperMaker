@@ -126,10 +126,9 @@ public class PaperMaker
     System.out.println(prompt);
     in = new Scanner(System.in);
     line = in.nextLine();
-    if (line.equals("DONE")) return "";
+    if (line.equals("")) return "";
     sb.append(line);
     sb.append(" ");
-
     return sb.toString();
   }
 
@@ -139,14 +138,15 @@ public class PaperMaker
     System.out.println(prompt);
     in = new Scanner(System.in);
     line = in.nextLine();
-    if (line.equals("DONE")) return "";
-    while (!line.equals("DONE"))
+    if (line.equals("")) return "";
+    while (!line.equals(""))
     {
       sb.append(line);
       sb.append(" ");
       System.out.println(prompt);
       in = new Scanner(System.in);
-      line = in.nextLine();
+      if (in.hasNextLine()) line = in.nextLine();
+      else line = "";
     }
 
     return sb.toString();

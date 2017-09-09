@@ -114,7 +114,8 @@ public class PaperMaker
     StringBuilder sb = new StringBuilder();
     sb.append("\t");
     sb.append(singlePrompt("Restate your claim: "));
-    sb.append(repeatPrompt("Restate your argument: "));    sb.append(repeatPrompt("So what? "));
+    sb.append(repeatPrompt("Restate your argument: "));
+    sb.append(repeatPrompt("So what? "));
     sb.append(singlePrompt("Closing line: "));
     sb.append("\n");
     content.append(sb.toString());
